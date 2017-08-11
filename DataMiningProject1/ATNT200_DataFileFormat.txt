@@ -1,0 +1,43 @@
+ATNT200.zip
+
+Total 200 images.
+Training data 180 images 
+Testing data:  20 images
+
+Your tasts:
+
+Train the classifier using the training data.
+Assign class labels to the testing data
+
+NOTE: 
+1. A big part of writing data mining codes are
+arrange data into proper format. 
+2. Data mining algorithm
+usually requires much less effort.
+3. Interpret the results after running your classifer
+also takes some efforts. 
+
+
+Most of your time will be on get your data right,
+including feature vectors and class labels !  
+
+------------------------------------------------------
+
+trainDataXY.txt:
+
+This file contains 644+1 lines and each line has 180 integers
+
+1st line are class labels for each data sample
+
+Lines 2 - 645 contain feature vectors of the train data
+Each column is a data sample, which is the pixel value of a face image (as shown in class)  
+
+
+testDataX.txt:
+
+This file contains 644 lines and each line has 20 integers
+
+Lines 1 - 644 contain feature vectors of the test data
+Each column is a data sample, which is the pixel value of a face image (as shown in class)  
+
+===================================================================

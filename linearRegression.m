@@ -1,0 +1,19 @@
+function res = linearRegression(Xtrain,Xtest)
+% trainingfilename = '/Users/abrar/Downloads/DataMiningProject1/ATNT50/trainDataXY.txt';
+% testfilename = '/Users/abrar/Downloads/DataMiningProject1/ATNT50/testDataX.txt';
+% delimiterIn = ',';
+% Xtrain = importdata(trainingfilename,delimiterIn);
+YHeader = Xtrain(1,:);
+Xtrain(1,:)=[];
+noOfUniqueClass = size(unique(YHeader),2);
+n = size(YHeader,2);
+Ytrain  = sparse(YHeader,1:n,1,noOfUniqueClass,n);
+Ytrain = full(Ytrain);
+% Xtest = importdata(testfilename,delimiterIn);
+B = pinv(Xtrain') *  double(Ytrain)'  ; % (XX')^{-1} X  * Y'
+Ytrain1 = B' * Xtrain;
+Ytest1 = B' * Xtest;
+[Ytest2value,  Ytest2]= max(Ytest1,[],1);
+[Ytrain2value , Ytrain2]= max(Ytrain1,[],1);
+res = Ytest2;
+end
